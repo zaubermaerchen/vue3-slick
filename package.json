@@ -1,18 +1,36 @@
 {
-  "name": "vue3-slick",
+  "name": "@zaubermaerchen/vue3-slick",
+  "description": "slick-carousel component for Vue3",
+  "keywords": [
+    "slick-carousel",
+    "vue"
+  ],
   "private": true,
   "version": "0.0.0",
   "license": "MIT",
   "type": "module",
+  "main": "dist/slickCompornent.umd.js",
+  "module": "dist/slickCompornent.es.js",
+  "source": "src/components/Slick.vue",
+  "types": "types/index",
+  "homepage": "https://github.com/zaubermaerchen/vue3-slick#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zaubermaerchen/vue3-slick.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zaubermaerchen/vue3-slick/issues"
+  },
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "build": "vue-tsc --noEmit && vite build"
+  },
+  "peerDependencies": {
+    "jquery": "*",
+    "vue": "^3.2"
   },
   "dependencies": {
-    "jquery": "^3.6.0",
-    "slick-carousel": "^1.8.1",
-    "vue": "^3.2.37"
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@types/jquery": "^3.5.14",
@@ -24,8 +42,11 @@
     "@vue/eslint-config-typescript": "^11.0.0",
     "eslint": "^8.22.0",
     "eslint-plugin-vue": "^9.3.0",
+    "jquery": "^3.6.0",
+    "slick-carousel": "^1.8.1",
     "typescript": "^4.7.4",
     "vite": "^3.0.7",
+    "vue": "^3.2.37",
     "vue-tsc": "^0.38.9"
   }
 }

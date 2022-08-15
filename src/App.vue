@@ -84,11 +84,11 @@ const onLazyLoadError = (event: JQuery.Event, slick: JQuerySlick, image: object,
   @swipe="onSwipe"
   @lazyLoaded="onLazyLoaded"
   @lazyLoadError="onLazyLoadError">
-  <img data-lazy="images/image01.png">
-  <img data-lazy="images/image02.png">
-  <img data-lazy="images/image03.png">
-  <img data-lazy="images/image04.png">
-  <img data-lazy="images/image05.png">
+  <img data-lazy="/src/images/image01.png">
+  <img data-lazy="/src/images/image02.png">
+  <img data-lazy="/src/images/image03.png">
+  <img data-lazy="/src/images/image04.png">
+  <img data-lazy="/src/images/image05.png">
 </Slick>
 <button type="button" @click="play">play</button>
 <button type="button" @click="pause">pause</button>
