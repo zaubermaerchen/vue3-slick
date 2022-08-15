@@ -9,7 +9,7 @@ interface Props {
 interface Emits {
     (e: 'afterChange', event: JQuery.Event, slick: JQuerySlick, currentSlide: number): void;
     (e: 'beforeChange', event: JQuery.Event, slick: JQuerySlick, currentSlide: number, nextSlide: number): void;
-    (e: 'breakpoint', event: JQuery.Event, slick: JQuerySlick, breakpoint: any): void;
+    (e: 'breakpoint', event: JQuery.Event, slick: JQuerySlick, breakpoint: number | null): void;
     (e: 'destroy', event: JQuery.Event, slick: JQuerySlick): void;
     (e: 'edge', event: JQuery.Event, slick: JQuerySlick, direction: string): void;
     (e: 'init', event: JQuery.Event, slick: JQuerySlick): void;
@@ -135,7 +135,7 @@ const onBeforeChange = (event: JQuery.Event, slick: JQuerySlick, currentSlide: n
 /**
  * Fires after a breakpoint is hit
  */
-const onBreakpoint = (event: JQuery.Event, slick: JQuerySlick, breakpoint: any) => {
+const onBreakpoint = (event: JQuery.Event, slick: JQuerySlick, breakpoint: number | null) => {
     emit('breakpoint', event, slick, breakpoint);
 };
 
