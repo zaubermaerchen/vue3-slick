@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, computed, onMounted, onUnmounted } from 'vue';
 import $ from 'jquery';
 import 'slick-carousel';
 
@@ -24,50 +24,48 @@ const props = defineProps<Props>();
 const emit = defineEmits<Emits>();
 
 const root = ref<HTMLElement | null>(null);
-const $root = () => {
-    return root.value ? $(root.value) : undefined;
-}
+const $root = computed(() => root.value ? $(root.value) : undefined);
 
 /**
  * Returns the current slide index
  */
 const currentSlide = () => {
-    return $root()?.slick('slickCurrentSlide');
+    return $root.value?.slick('slickCurrentSlide');
 };
 
 /**
  * Navigates to a slide by index
  */
 const goTo = (slide: number, dontAnimate?: boolean) => {
-    $root()?.slick('slickGoTo', slide, dontAnimate);
+    $root.value?.slick('slickGoTo', slide, dontAnimate);
 };
 
 /**
  * Navigates to the next slide
  */
 const next = () => {
-    $root()?.slick('slickNext');
+    $root.value?.slick('slickNext');
 };
 
 /**
  * Navigates to the previous slide
  */
 const prev = () => {
-    $root()?.slick('slickPrev');
+    $root.value?.slick('slickPrev');
 };
 
 /**
  * Pauses autoplay
  */
 const pause = () => {
-    $root()?.slick('slickPause');
+    $root.value?.slick('slickPause');
 };
 
 /**
  * Starts autoplay
  */
 const play = () => {
-    $root()?.slick('slickPlay');
+    $root.value?.slick('slickPlay');
 };
 
 /**
@@ -75,7 +73,7 @@ const play = () => {
  * add to the end or to the beginning if addBefore is set. Accepts HTML String || Object
  */
 const add = (html: string | Object, index?: number, addBefore?: number) => {
-    $root()?.slick('slickAdd', html, index, addBefore);
+    $root.value?.slick('slickAdd', html, index, addBefore);
 };
 
 /**
@@ -83,7 +81,7 @@ const add = (html: string | Object, index?: number, addBefore?: number) => {
  * If removeBefore is set to false, remove the slide following index, or the last slide if no index is set.
  */
 const remove = (index: number, removeBefore?: number) => {
-    $root()?.slick('slickRemove', index, removeBefore);
+    $root.value?.slick('slickRemove', index, removeBefore);
 };
 
 /**
@@ -91,9 +89,9 @@ const remove = (index: number, removeBefore?: number) => {
  */
 const filter = (filter: string | ((index: number, element: Element) => any)) => {
     if (typeof filter === 'string') {
-        $root()?.slick('slickFilter', filter);
+        $root.value?.slick('slickFilter', filter);
     } else {
-        $root()?.slick('slickFilter', filter);
+        $root.value?.slick('slickFilter', filter);
     }
 };
 
@@ -101,21 +99,21 @@ const filter = (filter: string | ((index: number, element: Element) => any)) => 
  * Removes applied filtering
  */
 const unfilter = (index: number) => {
-    $root()?.slick('slickUnfilter', index);
+    $root.value?.slick('slickUnfilter', index);
 };
 
 /**
  * Sets an individual value live. Set refresh to true if it's a UI update.
  */
 const getOption = (option: any) => {
-    return $root()?.slick('slickGetOption', option);
+    return $root.value?.slick('slickGetOption', option);
 };
 
 /**
  * Sets an individual value live. Set refresh to true if it's a UI update.
  */
 const setOption = (option: string, value: JQuerySlickOptions, refresh?: boolean) => {
-    $root()?.slick('slickSetOption', option, value, refresh);
+    $root.value?.slick('slickSetOption', option, value, refresh);
 };
 
 /**
@@ -197,7 +195,7 @@ const onLazyLoadError = (event: JQuery.Event, slick: JQuerySlick, image: object,
 
 
 const init = () => {
-    $root()?.on('afterChange', onAfterChange)
+    $root.value?.on('afterChange', onAfterChange)
             .on('beforeChange', onBeforeChange)
             .on('breakpoint', onBreakpoint)
             .on('destroy', onDestroy)
@@ -213,7 +211,7 @@ const init = () => {
 };
 
 const destroy = () => {
-    $root()?.off('afterChange', onAfterChange)
+    $root.value?.off('afterChange', onAfterChange)
             .off('beforeChange', onBeforeChange)
             .off('breakpoint', onBreakpoint)
             .off('destroy', onDestroy)
