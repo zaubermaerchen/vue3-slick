@@ -7,11 +7,11 @@ declare class Slick extends Vue {
     prev(): void;
     pause(): void;
     play(): void;
-    add(html: string | Object, index?: number, addBefore?: number): void;
+    add(html: string | object, index?: number, addBefore?: number): void;
     remove(index: number, removeBefore?: number): void;
-    filter(filter: string | ((index: number, element: Element) => any)): void;
+    filter(filter: string | ((index: number, element: Element) => unknown)): void;
     unfilter(index: number): void;
-    getOption(option: any): JQuerySlickOptions | undefined;
+    getOption(option: unknown): JQuerySlickOptions | undefined;
     setOption(option: string, value: JQuerySlickOptions, refresh?: boolean): void;
     reSlick(): void;
 }

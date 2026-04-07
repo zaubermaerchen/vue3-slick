@@ -72,7 +72,7 @@ const play = () => {
  * Add a slide. If an index is provided, will add at that index, or before if addBefore is set. If no index is provided,
  * add to the end or to the beginning if addBefore is set. Accepts HTML String || Object
  */
-const add = (html: string | Object, index?: number, addBefore?: number) => {
+const add = (html: string | object, index?: number, addBefore?: number) => {
     $root.value?.slick('slickAdd', html, index, addBefore);
 };
 
@@ -87,12 +87,8 @@ const remove = (index: number, removeBefore?: number) => {
 /**
  * Filters slides using jQuery .filter()
  */
-const filter = (filter: string | ((index: number, element: Element) => any)) => {
-    if (typeof filter === 'string') {
+const filter = (filter: string | ((index: number, element: Element) => unknown)) => {
         $root.value?.slick('slickFilter', filter);
-    } else {
-        $root.value?.slick('slickFilter', filter);
-    }
 };
 
 /**
@@ -105,7 +101,7 @@ const unfilter = (index: number) => {
 /**
  * Sets an individual value live. Set refresh to true if it's a UI update.
  */
-const getOption = (option: any) => {
+const getOption = (option: unknown) => {
     return $root.value?.slick('slickGetOption', option);
 };
 
