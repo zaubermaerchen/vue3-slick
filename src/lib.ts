@@ -1,3 +1,3 @@
-import Slick from './components/Slick.vue';
+import Slick from './components/Slick.vue'
 
-export default Slick;
+export default Slick
