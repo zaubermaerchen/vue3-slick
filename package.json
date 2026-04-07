@@ -12,6 +12,11 @@
   "module": "dist/slickCompornent.es.js",
   "source": "src/components/Slick.vue",
   "types": "types/index",
+  "files": [
+    "dist",
+    "src",
+    "types"
+  ],
   "homepage": "https://github.com/zaubermaerchen/vue3-slick#readme",
   "repository": {
     "type": "git",
