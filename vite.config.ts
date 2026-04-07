@@ -1,3 +1,5 @@
+import { fileURLToPath } from 'node:url'
+
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import path from 'path';
@@ -6,7 +8,7 @@ import path from 'path';
 export default defineConfig({
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/lib.ts'),
+      entry: path.join(path.dirname(fileURLToPath(import.meta.url)), 'src/lib.ts'),
       name: 'vue3-slick',
       fileName: (format) => `slickCompornent.${format}.js`,
     },
@@ -18,6 +20,7 @@ export default defineConfig({
         globals: {
           vue: 'Vue',
           jquery: '$',
+          'slick-carousel': 'slick_carousel',
         },
       },
     },
