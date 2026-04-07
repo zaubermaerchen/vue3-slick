@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { useTemplateRef, computed, onMounted, onUnmounted } from 'vue'
 import $ from 'jquery'
 import 'slick-carousel'
 
@@ -41,7 +41,7 @@ interface Emits {
 const props = defineProps<Props>()
 const emit = defineEmits<Emits>()
 
-const root = ref<HTMLElement | null>(null);
+const root = useTemplateRef('root')
 const $root = computed(() => (root.value ? $(root.value) : undefined))
 
 /**
