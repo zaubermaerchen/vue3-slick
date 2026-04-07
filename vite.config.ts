@@ -4,6 +4,9 @@ import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import path from 'path';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 // https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
@@ -13,7 +16,7 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: path.join(path.dirname(fileURLToPath(import.meta.url)), 'src/lib.ts'),
+      entry: path.join(__dirname, 'src/lib.ts'),
       name: 'vue3-slick',
       fileName: (format) => `slickCompornent.${format}.js`,
     },
