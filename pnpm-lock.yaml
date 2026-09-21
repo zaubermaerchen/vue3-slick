@@ -171,34 +171,28 @@ importers:
         version: 1.8.1(jquery@3.7.1)
     devDependencies:
       '@prettier/plugin-oxc':
-        specifier: ^0.1.3
+        specifier: ^0.1.4
         version: 0.1.4
       '@tsconfig/node22':
-        specifier: ^22.0.5
+        specifier: ^22.0.6
         version: 22.0.6
       '@types/jquery':
-        specifier: ^3.5.32
+        specifier: ^3.5.34
         version: 3.5.34
       '@types/node':
-        specifier: ^22.18.6
+        specifier: ^22.20.4
         version: 22.20.4
       '@types/slick-carousel':
         specifier: ^1.6.40
         version: 1.6.40
-      '@typescript-eslint/eslint-plugin':
-        specifier: ^8.58.0
-        version: 8.70.0(@typescript-eslint/parser@8.70.0(eslint@10.11.0(jiti@2.7.0))(typescript@6.0.3))(eslint@10.11.0(jiti@2.7.0))(typescript@6.0.3)
-      '@typescript-eslint/parser':
-        specifier: ^8.58.0
-        version: 8.70.0(eslint@10.11.0(jiti@2.7.0))(typescript@6.0.3)
       '@vitejs/plugin-vue':
-        specifier: ^6.0.5
+        specifier: ^6.0.9
         version: 6.0.9(vite@8.3.0(@types/node@22.20.4)(jiti@2.7.0))(vue@3.5.43(typescript@6.0.3))
       '@vue/eslint-config-prettier':
         specifier: ^10.2.0
         version: 10.2.0(eslint@10.11.0(jiti@2.7.0))(prettier@3.9.8)
       '@vue/eslint-config-typescript':
-        specifier: ^14.7.0
+        specifier: ^14.9.0
         version: 14.9.0(eslint-plugin-vue@10.11.0(@typescript-eslint/parser@8.70.0(eslint@10.11.0(jiti@2.7.0))(typescript@6.0.3))(eslint@10.11.0(jiti@2.7.0))(vue-eslint-parser@10.4.1(eslint@10.11.0(jiti@2.7.0))))(eslint@10.11.0(jiti@2.7.0))(typescript@6.0.3)
       '@vue/test-utils':
         specifier: ^2.5.1
@@ -207,16 +201,16 @@ importers:
         specifier: ^0.9.1
         version: 0.9.1(typescript@6.0.3)(vue@3.5.43(typescript@6.0.3))
       eslint:
-        specifier: ^10.2.0
+        specifier: ^10.11.0
         version: 10.11.0(jiti@2.7.0)
       eslint-plugin-oxlint:
-        specifier: ^1.58.0
+        specifier: ^1.83.0
         version: 1.83.0(oxlint@1.83.0)
       eslint-plugin-vue:
-        specifier: ^10.4.0
+        specifier: ^10.11.0
         version: 10.11.0(@typescript-eslint/parser@8.70.0(eslint@10.11.0(jiti@2.7.0))(typescript@6.0.3))(eslint@10.11.0(jiti@2.7.0))(vue-eslint-parser@10.4.1(eslint@10.11.0(jiti@2.7.0)))
       jiti:
-        specifier: ^2.6.1
+        specifier: ^2.7.0
         version: 2.7.0
       jquery:
         specifier: ^3.7.1
@@ -228,25 +222,25 @@ importers:
         specifier: ^8.0.4
         version: 8.0.4
       oxlint:
-        specifier: ^1.58.0
+        specifier: ^1.83.0
         version: 1.83.0
       prettier:
-        specifier: ^3.8.1
+        specifier: ^3.9.8
         version: 3.9.8
       typescript:
-        specifier: ^6.0.2
+        specifier: ^6.0.3
         version: 6.0.3
       vite:
-        specifier: ^8.0.5
+        specifier: ^8.3.0
         version: 8.3.0(@types/node@22.20.4)(jiti@2.7.0)
       vitest:
         specifier: ^5.0.1
         version: 5.0.1(@types/node@22.20.4)(jsdom@26.1.0)(vite@8.3.0(@types/node@22.20.4)(jiti@2.7.0))
       vue:
-        specifier: ^3.5.32
+        specifier: ^3.5.43
         version: 3.5.43(typescript@6.0.3)
       vue-tsc:
-        specifier: ^3.2.6
+        specifier: ^3.3.11
         version: 3.3.11(typescript@6.0.3)
 
 packages:
