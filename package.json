@@ -11,7 +11,7 @@
   "main": "dist/slickCompornent.umd.js",
   "module": "dist/slickCompornent.es.js",
   "source": "src/components/Slick.vue",
-  "types": "types/index",
+  "types": "types/lib.d.ts",
   "files": [
     "dist",
     "src",
@@ -30,6 +30,8 @@
     "test": "vitest run --environment jsdom",
     "build": "run-p type-check \"build-only {@}\" --",
     "build-only": "vite build",
+    "build:types": "vue-tsc -p tsconfig.lib.json",
+    "prepack": "npm run build && npm run build:types",
     "type-check": "vue-tsc --build",
     "lint:oxlint": "oxlint . --fix -D correctness --ignore-path .gitignore",
     "lint:eslint": "eslint . --fix",
