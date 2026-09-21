@@ -6,6 +6,7 @@
     "vue"
   ],
   "version": "0.2.0",
+  "packageManager": "pnpm@12.4.1",
   "license": "MIT",
   "type": "module",
   "main": "dist/slickCompornent.umd.js",
@@ -31,7 +32,7 @@
     "build": "run-p type-check \"build-only {@}\" --",
     "build-only": "vite build",
     "build:types": "vue-tsc -p tsconfig.lib.json",
-    "prepack": "npm run build && npm run build:types",
+    "prepack": "run-s build build:types",
     "type-check": "vue-tsc --build",
     "lint:oxlint": "oxlint . --fix -D correctness --ignore-path .gitignore",
     "lint:eslint": "eslint . --fix",
