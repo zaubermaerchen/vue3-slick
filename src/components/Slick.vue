@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useTemplateRef, computed, onMounted, onUnmounted } from 'vue'
+import { useTemplateRef, computed, onMounted, onBeforeUnmount } from 'vue'
 import $ from 'jquery'
 import 'slick-carousel'
 
@@ -262,7 +262,7 @@ const reInit = () => {
 onMounted(() => {
   init()
 })
-onUnmounted(() => {
+onBeforeUnmount(() => {
   destroy()
 })
 
