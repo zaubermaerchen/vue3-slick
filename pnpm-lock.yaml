@@ -165,10 +165,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      slick-carousel:
-        specifier: ^1.8.1
-        version: 1.8.1(jquery@3.7.1)
     devDependencies:
       '@prettier/plugin-oxc':
         specifier: ^0.1.4
@@ -227,6 +223,9 @@ importers:
       prettier:
         specifier: ^3.9.8
         version: 3.9.8
+      slick-carousel:
+        specifier: ^1.8.1
+        version: 1.8.1(jquery@3.7.1)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3

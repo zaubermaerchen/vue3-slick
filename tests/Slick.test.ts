@@ -15,7 +15,7 @@ const jquery = vi.hoisted(() => {
 })
 
 vi.mock('jquery', () => ({ default: jquery.factory }))
-vi.mock('slick-carousel', () => ({}))
+vi.mock('slick-carousel', () => ({ default: undefined }))
 
 import Slick from '../src/components/Slick.vue'
 

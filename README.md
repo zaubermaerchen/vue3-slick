@@ -2,6 +2,8 @@
 
 [slick-carousel](http://kenwheeler.github.io/slick) component for Vue3
 
+Install `slick-carousel` v1 or v2 alongside this component. jQuery 3 is required.
+
 ## Example
 
 See [example project](https://github.com/zaubermaerchen/vue3-slick-example)

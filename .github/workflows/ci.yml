@@ -11,9 +11,13 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        slick: ['1.8.1', '2.0.0']
     steps:
       - uses: actions/checkout@v7
       - uses: jdx/mise-action@v4
       - run: pnpm install --frozen-lockfile
+      - run: pnpm add --save-dev slick-carousel@${{ matrix.slick }}
       - run: pnpm test
       - run: pnpm build

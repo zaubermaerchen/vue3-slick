@@ -44,10 +44,8 @@
   },
   "peerDependencies": {
     "jquery": "3.*",
+    "slick-carousel": "^1.8.1 || ^2.0.0",
     "vue": "^3.5"
-  },
-  "dependencies": {
-    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@prettier/plugin-oxc": "^0.1.4",
